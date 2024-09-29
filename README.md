@@ -4,7 +4,7 @@ This repository demonstrates a basic Cross-Site Scripting (XSS) vulnerability.
 
 ## Overview
 
-In this example, user input is directly rendered in the HTML without proper sanitization. An attacker can exploit this by injecting malicious scripts.
+In this example, user input is directly rendered in the HTML without proper sanitisation. An attacker can exploit this by injecting malicious scripts.
 
 ## How to Test
 

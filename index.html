@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Example</title>
+</head>
+<body>
+    <h1>Cross-Site Scripting (XSS) Attack Example</h1>
+    <form method="GET">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="output"></div>
+
+    <script>
+        // Vulnerable code: Outputs user input directly to the page
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        document.getElementById('output').innerHTML = `Hello, ${name}!`;
+    </script>
+</body>
+</html>
